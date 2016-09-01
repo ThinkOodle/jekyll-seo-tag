@@ -14,16 +14,13 @@
   {% assign seo_title = page.title %}
   {% assign seo_page_title = page.title %}
 
-  {% if seo_site_title %}
+  {% if seo_site_title and site.seo.append_site_title %}
     {% assign seo_title = seo_title | append:" - " | append: seo_site_title %}
   {% endif %}
 {% elsif seo_site_title %}
   {% assign seo_title = seo_site_title %}
   {% assign seo_page_title = seo_site_title %}
 
-  {% if site.description %}
-    {% assign seo_title = seo_title | append:" - " | append: site.description %}
-  {% endif %}
 {% endif %}
 
 {% if page.seo and page.seo.name %}
