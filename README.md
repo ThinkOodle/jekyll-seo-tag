@@ -99,6 +99,16 @@ If for some reason, you don't want the plugin to output `<title>` tags on each p
 {% seo title=false %}
 ```
 
+### Disabling appended title and description
+
+If you want to disable `site.title` or `site.description` from being automatically appended to titles on the site, these can be disabled in the `_config.yml` file by setting the following options:
+
+```yml
+seo:
+  disable_appended_site_title: true
+  disable_appended_title_description: true
+```
+
 ### Author information
 
 Author information is used to propagate the `creator` field of Twitter summary cards. This should be an author-specific, not site-wide Twitter handle (the site-wide username be stored as `site.twitter.username`).
